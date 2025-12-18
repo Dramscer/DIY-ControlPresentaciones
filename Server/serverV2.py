@@ -39,7 +39,7 @@ def list_files():
         # os.walk recorre el árbol de directorios completo (recursivo)
         for root, dirs, files in os.walk(CARPETA_PRESENTACIONES):
             for file in files:
-                if file.endswith((".pptx", ".ppt")):
+                if file.endswith((".pptx", ".ppt", ".ppsx", ".odp")):
                     # Calculamos la ruta relativa para que se vea: "Carpeta\Archivo.pptx"
                     # Si está en la raíz, root es igual a CARPETA_PRESENTACIONES
                     rel_dir = os.path.relpath(root, CARPETA_PRESENTACIONES)
