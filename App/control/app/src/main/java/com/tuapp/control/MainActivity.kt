@@ -68,6 +68,14 @@ class MainActivity : AppCompatActivity() {
             options.setCaptureActivity(com.journeyapps.barcodescanner.CaptureActivity::class.java)
             barcodeLauncher.launch(options)
         }
+
+
+        findViewById<Button>(R.id.btnKofi).setOnClickListener {
+            val url = "https://ko-fi.com/H2H11R2BDE"
+            val intent = Intent(Intent.ACTION_VIEW, android.net.Uri.parse(url))
+            startActivity(intent)
+        }
+
     }
 
     private fun cargarArchivos(ip: String) {
@@ -97,6 +105,9 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+
+
 
     private fun abrirPresentacion(ip: String, nombreArchivo: String) {
         // ... tu código anterior para abrir y cambiar de activity ...

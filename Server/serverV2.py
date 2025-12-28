@@ -24,7 +24,7 @@ def get_real_desktop_path():
 
 # 1. CREAR CARPETA EN EL ESCRITORIO
 desktop_path = get_real_desktop_path()
-CARPETA_PRESENTACIONES = os.path.join(desktop_path, "DROP_PRESENTACIONES_AQUI")
+CARPETA_PRESENTACIONES = os.path.join(desktop_path, "PRESENTO_SLIDES")
 
 if not os.path.exists(CARPETA_PRESENTACIONES):
     os.makedirs(CARPETA_PRESENTACIONES)
@@ -119,7 +119,7 @@ def obtener_ip_local():
 # --- INTERFAZ GRÁFICA ---
 def iniciar_gui(ip_address):
     root = tk.Tk()
-    root.title("Servidor Office Remote")
+    root.title("Servidor Presento")
     root.geometry("400x500")
     root.configure(bg="white")
 
@@ -142,7 +142,7 @@ def iniciar_gui(ip_address):
     lbl_ip.pack(pady=5)
     
     # Texto de la carpeta actualizado
-    lbl_folder = tk.Label(root, text=f"CARPETA EN EL ESCRITORIO:\n'DROP_PRESENTACIONES_AQUI'", 
+    lbl_folder = tk.Label(root, text=f"CARPETA EN EL ESCRITORIO:\n'PRESENTO_SLIDES'", 
                           font=("Arial", 10, "bold"), fg="#2E7D32", bg="white")
     lbl_folder.pack(pady=15, side=tk.BOTTOM)
 
